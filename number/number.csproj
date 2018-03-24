@@ -57,12 +57,20 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Chinese.aspx" />
     <Content Include="letter.aspx" />
     <Content Include="mixture.aspx" />
     <Content Include="numbers.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Chinese.aspx.cs">
+      <DependentUpon>Chinese.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Chinese.aspx.designer.cs">
+      <DependentUpon>Chinese.aspx</DependentUpon>
+    </Compile>
     <Compile Include="letter.aspx.cs">
       <DependentUpon>letter.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
