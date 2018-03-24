@@ -24,10 +24,8 @@
                 var t = Math.ceil(Math.random() * num.length);//Math.ceil(n); 返回大于等于n的最小整数。
                 s += num[t];
             }
-            document.getElementById("Label1").innerHTML = s;//这里不能是.Text,label在客户端会变成<span>,如果不用innerHTML改变不了值          
-
-            Session["letters"] = s;
-
+            document.getElementById("Label1").innerHTML = s;//这里不能是.Text,label在客户端会变成<span>,如果不用innerHTML改变不了值                    
+            document.getElementById("HiddenField1").value = s;
         }
         function changestyle() {
             document.getElementById("lab").style.cursor = 'pointer';
@@ -46,6 +44,7 @@
         <%--<a href="javascript:void(0)" onclick="getletters(4)" >看不清，换一张</a> --%>
         <%--  <!-- -->， html comment会包含在最终生成的html文件中
            现在使用的注释，aspx comment 不会包含在最终生成的html文件中 --%>
+        <asp:HiddenField ID="HiddenField1" runat="server" />
         <asp:Button ID="Button1" runat="server" Text="提交" OnClick="Button1_Click1"  />
     </form>
 </body>

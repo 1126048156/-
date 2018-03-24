@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="letter.aspx" />
+    <Content Include="mixture.aspx" />
     <Content Include="numbers.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -68,6 +69,13 @@
     </Compile>
     <Compile Include="letter.aspx.designer.cs">
       <DependentUpon>letter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="mixture.aspx.cs">
+      <DependentUpon>mixture.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mixture.aspx.designer.cs">
+      <DependentUpon>mixture.aspx</DependentUpon>
     </Compile>
     <Compile Include="numbers.aspx.cs">
       <DependentUpon>numbers.aspx</DependentUpon>

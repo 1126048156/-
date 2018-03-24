@@ -13,18 +13,27 @@ namespace number
         {
             if(!IsPostBack){
                  Label1.Text = getnumbers(4);
-            }     
+            }
+            if ( !string.IsNullOrEmpty(HiddenField1.Value))
+            {
+                Session["numbers"] = HiddenField1.Value;
+                Label1.Text = HiddenField1.Value;
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            if(TextBox1.Text==Session["numbers"].ToString())
+          
+            if(TextBox1.Text.ToString()==Session["numbers"].ToString())
             {
                 Response.Write("成功！");
+                TextBox1.Text = "";
             }
             else
             {
                 Response.Write("失败!");
+                TextBox1.Text = "";
+                HiddenField1.Value = "";
                 Label1.Text = getnumbers(4);//重新产生随机数字
             }
         }

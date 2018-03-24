@@ -16,9 +16,8 @@
                 s += num[t];
             }            
             document.getElementById("Label1").innerHTML = s;//这里不能是.Text,label在客户端会变成<span>,如果不用innerHTML改变不了值          
+            document.getElementById("HiddenField1").value = s;
             
-            Session["numbers"] = s;
-           
         }
         function changestyle() {          
             document.getElementById("lab").style.cursor = 'pointer';
@@ -34,9 +33,12 @@
             验证码：<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
 </p>
          <div id="lab" onclick="getnumbers(4)" onmousemove="changestyle()"><asp:Label ID="Label1" runat="server" Text="Label"></asp:Label></div>          
+        
         <%--<a href="javascript:void(0)" onclick="getnumbers(4)" >看不清，换一张</a> --%>
         <%--  <!-- -->， html comment会包含在最终生成的html文件中
            现在使用的注释，aspx comment 不会包含在最终生成的html文件中 --%>
+        <asp:HiddenField ID="HiddenField1" runat="server" />
+        <br />
         <asp:Button ID="Button1" runat="server" Text="提交" OnClick="Button1_Click" />
     </form>
 </body>
