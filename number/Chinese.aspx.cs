@@ -16,11 +16,7 @@ namespace number
             {
                 Label1.Text = display();
             }
-            if (!string.IsNullOrEmpty(HiddenField1.Value))
-            {
-                Session["chinese"] = HiddenField1.Value.ToLower();
-                Label1.Text = HiddenField1.Value;
-            }
+          
         }
 
         protected void Button1_Click1(object sender, EventArgs e)
@@ -33,8 +29,7 @@ namespace number
             else
             {
                 Response.Write("失败!");
-                TextBox1.Text = "";
-                HiddenField1.Value = "";//必须要这个，失败了之后不会采用前面的js代码，但是有可能HIddenFild里面有值，一直失败的话HiddenFild里面的值也不会变，一直错误
+                TextBox1.Text = "";              
                 Label1.Text = display();//重新产生随机数字
             }
         }

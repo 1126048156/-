@@ -1,6 +1,0 @@
-E:\Web\number\number\bin\number.dll.config
-E:\Web\number\number\bin\number.dll
-E:\Web\number\number\bin\number.pdb
-E:\Web\number\number\obj\Debug\number.csprojResolveAssemblyReference.cache
-E:\Web\number\number\obj\Debug\number.dll
-E:\Web\number\number\obj\Debug\number.pdb
